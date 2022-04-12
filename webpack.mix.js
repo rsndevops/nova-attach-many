@@ -6,4 +6,4 @@ mix
     .setPublicPath('dist')
     .js('resources/js/field.js', 'js')
     .vue({ version: 3 })
-    .nova("dillingham/nova-attach-many")
+    .nova("blendbyte/nova-attach-many")
