@@ -7,7 +7,7 @@ Belongs To Many create & edit form UI for Nova. Enables attaching relationships 
 ### Installation
 
 ```bash
-composer require dillingham/nova-attach-many
+composer require blendbyte/nova-attach-many
 ```
 
 ### Usage
