@@ -2,7 +2,6 @@
 
 namespace NovaAttachMany\Providers;
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
@@ -36,7 +35,7 @@ class FieldServiceProvider extends ServiceProvider
             return;
         }
 
-        Route::middleware(['nova'])
+        \Illuminate\Support\Facades\Route::middleware(['nova'])
             ->prefix('nova-vendor/nova-attach-many')
             ->group(__DIR__.'/../../routes/api.php');
     }
