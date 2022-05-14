@@ -3,10 +3,9 @@
 namespace NovaAttachMany\Providers;
 
 use Illuminate\Support\Facades\Route;
-use Laravel\Nova\Nova;
-use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\ServiceProvider;
-use NovaAttachMany\Http\Middleware\Authorize;
+use Laravel\Nova\Events\ServingNova;
+use Laravel\Nova\Nova;
 
 class FieldServiceProvider extends ServiceProvider
 {
