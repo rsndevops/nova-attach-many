@@ -1,5 +1,5 @@
 <template>
-    <DefaultField :field="currentField" :full-width-content="currentField.fullWidth" :show-help-text="false" class="nova-attach-many">
+    <DefaultField :field="currentField" :full-width-content="true" :show-help-text="false" class="nova-attach-many">
         <template #field :class="{'border-danger border': hasErrors}">
             <div class="attach-many-container" :class="{'border-danger border': hasErrors}">
                 <div v-if="currentField.showToolbar" class="flex items-center border border-b-0 border-gray-100 dark:border-gray-700">
@@ -17,19 +17,19 @@
                             class="w-full form-control form-input form-input-bordered" />
                     </div>
                 </div>
-                <div class="border border-gray-100 dark:border-gray-700 relative overflow-scroll" :style="{ height: currentField.height }" >
-                    <div v-if="loading" class="flex justify-center" :style="{ height: currentField.height }">
+                <div class="nam-border nam-border-gray-100 nam-dark:border-gray-700 nam-relative nam-overflow-scroll" :style="{ height: currentField.height }" >
+                    <div v-if="loading" class="nam-flex nam-justify-center" :style="{ height: currentField.height }">
                         <loader />
                     </div>
                     <CheckboxWithLabel
                         v-else
-                        class="p-3 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700"
+                        class="nam-p-3 nam-cursor-pointer nam-hover:bg-gray-100 nam-dark:hover:bg-gray-700"
                         v-for="resource in resources"
                         :key="resource.value"
                         :checked="selected.includes(resource.value)"
                         @input="toggle($event, resource.value)"
                     >
-                        <div class="flex flex-col">
+                        <div class="nam-flex nam-flex-col">
                             <div>{{ resource.display }}</div>
                             <div v-if="currentField.withSubtitles">
                                 <span v-if="resource.subtitle">{{ resource.subtitle }}</span>
