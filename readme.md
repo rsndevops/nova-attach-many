@@ -7,7 +7,7 @@ Belongs To Many create & edit form UI for Nova. Enables attaching relationships 
 ### Installation
 
 ```bash
-composer require blendbyte/nova-attach-many
+composer require rsndevops/nova-attach-many
 ```
 
 ### Usage
@@ -15,6 +15,7 @@ composer require blendbyte/nova-attach-many
 ```php
 use NovaAttachMany\AttachMany;
 ```
+
 ```php
 public function fields(Request $request)
 {
@@ -31,6 +32,7 @@ AttachMany::make('Field Name', 'relationshipName', RelatedResource::class);
 ```
 
 ### Pivot Values
+
 You can pass additional parameters for any pivot value.  
 For details, please check https://laravel.com/docs/9.x/eloquent-relationships#syncing-associations
 
@@ -63,7 +65,6 @@ You can set min, max, size or custom rule objects
 ```
 
 <img src="https://user-images.githubusercontent.com/29180903/52160802-9ee9ac80-2689-11e9-9657-80e3c0d83b27.png" width="75%" />
-
 
 ### Options
 
@@ -111,9 +112,10 @@ public function permissionsSynced(array $changes)
 }
 ```
 
-
 ### Authorization
+
 This field also respects policies: ie Role / Permission
+
 - RolePolicy: attachAnyPermission($user, $role)
 - RolePolicy: attachPermission($user, $role, $permission)
 - PermissionPolicy: viewAny($user)

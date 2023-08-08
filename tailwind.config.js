@@ -16,6 +16,6 @@ module.exports = {
 
     },
     plugins: [],
-    prefix: 'nam-',
+    prefix: '',
     // important: '.nova-attach-many'
 }
