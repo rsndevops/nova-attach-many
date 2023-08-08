@@ -17,13 +17,13 @@
                             class="w-full form-control form-input form-input-bordered" />
                     </div>
                 </div>
-                <div class="nam-border nam-border-gray-100 nam-dark:border-gray-700 nam-relative nam-overflow-scroll" :style="{ height: currentField.height }" >
+                <div class="nam-border nam-border-gray-100 dark:nam-border-gray-700 nam-relative nam-overflow-scroll" :style="{ height: currentField.height }" >
                     <div v-if="loading" class="nam-flex nam-justify-center" :style="{ height: currentField.height }">
                         <loader />
                     </div>
                     <CheckboxWithLabel
                         v-else
-                        class="nam-p-3 nam-cursor-pointer nam-hover:bg-gray-100 nam-dark:hover:bg-gray-700"
+                        class="nam-p-3 nam-cursor-pointer hover:nam-bg-gray-100 dark:hover:nam-bg-gray-700"
                         v-for="resource in resources"
                         :key="resource.value"
                         :checked="selected.includes(resource.value)"
